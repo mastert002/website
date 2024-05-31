@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "0693d726-baa6-493d-b207-b610dcc6da85",
+		"name": "BookNow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API Status",
+			"id": "6a5c1bcc-72f0-42a7-b7d0-f506119dbafe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseURL}}/status"
+			},
+			"response": []
+		},
+		{
+			"name": "List of books",
+			"id": "4ba73d9f-5e99-4926-98ca-a4d55a694fd5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseURL}}/books"
+			},
+			"response": []
+		},
+		{
+			"name": "Book ID",
+			"id": "7b2674e0-5d77-4920-aca5-ccee3a6d479a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/books/:bookid",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"books",
+						":bookid"
+					],
+					"variable": [
+						{
+							"id": "7c7bef75-374f-4250-b9b0-5e6794b9794b",
+							"key": "bookid",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://simple-books-api.glitch.me"
+		}
+	]
+}
